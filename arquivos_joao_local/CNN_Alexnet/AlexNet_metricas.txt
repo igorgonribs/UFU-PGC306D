@@ -1,0 +1,2 @@
+val  Acc: 0.9972
+test Acc: 0.9823

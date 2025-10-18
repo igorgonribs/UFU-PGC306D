@@ -1,0 +1,42 @@
+=================================================================
+Layer (type:depth-idx)                   Param #
+=================================================================
+AlexNet                                  --
+├─Sequential: 1-1                        --
+│    └─Conv2d: 2-1                       2,688
+│    └─BatchNorm2d: 2-2                  192
+│    └─ReLU: 2-3                         --
+│    └─MaxPool2d: 2-4                    --
+├─Sequential: 1-2                        --
+│    └─Conv2d: 2-5                       614,656
+│    └─BatchNorm2d: 2-6                  512
+│    └─ReLU: 2-7                         --
+│    └─MaxPool2d: 2-8                    --
+├─Sequential: 1-3                        --
+│    └─Conv2d: 2-9                       885,120
+│    └─BatchNorm2d: 2-10                 768
+│    └─ReLU: 2-11                        --
+├─Sequential: 1-4                        --
+│    └─Conv2d: 2-12                      1,327,488
+│    └─BatchNorm2d: 2-13                 768
+│    └─ReLU: 2-14                        --
+├─Sequential: 1-5                        --
+│    └─Conv2d: 2-15                      884,992
+│    └─BatchNorm2d: 2-16                 512
+│    └─ReLU: 2-17                        --
+│    └─MaxPool2d: 2-18                   --
+├─Sequential: 1-6                        --
+│    └─Dropout: 2-19                     --
+│    └─Linear: 2-20                      37,752,832
+│    └─ReLU: 2-21                        --
+├─Sequential: 1-7                        --
+│    └─Dropout: 2-22                     --
+│    └─Linear: 2-23                      16,781,312
+│    └─ReLU: 2-24                        --
+├─Sequential: 1-8                        --
+│    └─Linear: 2-25                      176,171
+=================================================================
+Total params: 58,428,011
+Trainable params: 58,428,011
+Non-trainable params: 0
+=================================================================
