@@ -1,0 +1,32 @@
+this_file: "alexnet_define.yaml"
+# Directories definitions
+datasets_root: "datasets"
+dataset_train_dir: "datasets/train"
+dataset_test_dir: "datasets/test"
+dataset_val_dir: "datasets/val"
+
+# Common Parameters
+use_cuda: yes
+
+num_classes: 43
+
+# Alexnet Parameters
+input_shape: (227,227,3)
+classes: 2
+activation_func: 'relu'
+activation_func_dense: 'softmax'
+filters_l1: 128
+filters_l2: 96
+filters_l3: 96
+filters_l4: 96
+filters_l5: 64
+kernel_size: (3,3)
+val_regularization: 0.0005
+padding_conv: 'same'
+padding_max_pool: 'valid'
+strides_conv: (1,1)
+strides_max_pool: (2,2)
+dropout_n1: 0.2
+dropout_n2: 0.3
+num_neural: 1024
+directory: "../../train_models/"

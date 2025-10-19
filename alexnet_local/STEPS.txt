@@ -1,0 +1,25 @@
+
+# Rodar o script de preprocessamento
+./GTSRB_preprocess.py
+
+# Rodar o script de geração dos dataloaders em formato torch
+./dataloaders_gen.py
+
+
+# AlexNet
+  * conferir o arquivo de definição de parâmetros
+    configs/alexnet_define.yaml
+
+# Rodar o script de definição do modelo
+./alexnet_define.py --load_config configs/alexnet_define.yaml
+
+# Rodar o script de treinamento e validação do modelo
+./alexnet_train.py --load_config configs/alexnet_define.yaml
+
+# TODO: tirar a parte de testes do script de treinamento
+
+# Rodar o script de teste (dados não vistos) e geração de métricas
+./alexnet_test.py --load_config configs/alexnet_define.yaml
+
+#=======
+
