@@ -1,18 +1,24 @@
-this_file: "alexnet_define.yaml"
-# Directories definitions
-datasets_root: "datasets"
-dataset_train_dir: "datasets/train"
-dataset_test_dir: "datasets/test"
-dataset_val_dir: "datasets/val"
+this_file: "alexnet.yaml"
+model_name: "AlexNet"
+mutation: 0
+root_dir: "../../"
+model_out_dir: "../../saved_models/"
+dataloaders_dir: "../../dataloaders/"
+imagefolder_dir: "../../GTSRB_novo/Final_Training/Images"
+
+
+graph_out_dir: "../../outputs/graphs/"
+metric_out_dir: "../../outputs/stats/"
+random_seed: 13
 
 # Common Parameters
 use_cuda: yes
-
 num_classes: 43
+max_epochs: 15
 
 # Alexnet Parameters
 input_shape: (227,227,3)
-classes: 2
+classes: 43
 activation_func: 'relu'
 activation_func_dense: 'softmax'
 filters_l1: 128
@@ -30,3 +36,4 @@ dropout_n1: 0.2
 dropout_n2: 0.3
 num_neural: 1024
 directory: "../../train_models/"
+

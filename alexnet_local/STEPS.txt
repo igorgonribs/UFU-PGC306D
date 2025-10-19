@@ -8,18 +8,19 @@
 
 # AlexNet
   * conferir o arquivo de definição de parâmetros
-    configs/alexnet_define.yaml
+    networks/alexnet/alexnet.yaml
 
+cd networks/alexnet/
 # Rodar o script de definição do modelo
-./alexnet_define.py --load_config configs/alexnet_define.yaml
+./alexnet_define.py --config_file alexnet.yaml
 
-# Rodar o script de treinamento e validação do modelo
-./alexnet_train.py --load_config configs/alexnet_define.yaml
+# Rodar o script de treinamento e validação e teste do modelo
+./alexnet_train.py --config_file alexnet.yaml
 
-# TODO: tirar a parte de testes do script de treinamento
+# TODO: separar a parte de testes para um script dedicado
+#       nesse script terá os testes e a parte de metricas de desempenho.
 
 # Rodar o script de teste (dados não vistos) e geração de métricas
-./alexnet_test.py --load_config configs/alexnet_define.yaml
+./alexnet_test.py --config_file alexnet.yaml
 
 #=======
-

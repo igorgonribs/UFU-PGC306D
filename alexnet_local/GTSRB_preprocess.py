@@ -16,7 +16,18 @@ João Eloy
 # Importação das bibliotecas
 import os
 import sys
+import glob
+import yaml
 import shutil
+import datetime
+import argparse
+
+# Own modules (local sources)
+sys.path.append("../../")
+sys.path.append("./")
+from lib.config import *
+from lib.decor import *
+
 #---
 import urllib3
 import zipfile
@@ -30,6 +41,9 @@ from PIL import Image
 from skimage.transform import resize
 from skimage.util import crop
 import cv2
+
+# -= init =-
+banner(f"Program -> {os.path.basename(__file__)}")
 
 # baixando base de dados de placas de transito
 print("baixando base de dados de placas de transito... ", end='', flush=True)

@@ -10,8 +10,11 @@ import glob
 import yaml
 import argparse
 
-#sys.path.append("../../")
-from configs.config import *
+# Own modules (local sources)
+sys.path.append("../../")
+sys.path.append("./")
+from lib.config import *
+from lib.decor import *
 
 import torch
 import torch.nn as nn
@@ -19,7 +22,6 @@ import torch.nn.functional as F
 from torchinfo import summary
 
 #===========================
-args = parse_args()
 
 class AlexNet(nn.Module):
   def __init__(self, num_classes=10):
@@ -72,6 +74,11 @@ class AlexNet(nn.Module):
 
 
 if __name__ == "__main__":
+  # -= init =-
+  banner(f"Program -> {os.path.basename(__file__)}")
+
+  args = parse_args()
+
   net = AlexNet(num_classes=args.num_classes)
   net.name = net.__class__.__name__
   print(net)
@@ -79,6 +86,6 @@ if __name__ == "__main__":
 
   # Salvando modelo limpo
   print(f"Salvando o modelo '{net.name}' no disco...")
-  nomedomodelo = './saved_models/'+net.name+'_clean.pth'
+  nomedomodelo = args.model_out_dir+net.name+'_clean.pth'
   torch.save(net, nomedomodelo)
   sys.exit(0)
